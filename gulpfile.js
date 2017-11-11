@@ -44,6 +44,11 @@ gulp.task('sprite', function() {
     spriteData.css.pipe(gulp.dest('src/css/')); // путь, куда сохраняем стили
 });
 
+gulp.task('fonts', function() {
+    return gulp.src('src/fonts/**/*')
+        .pipe(gulp.dest('dist/fonts'))
+});
+
 
 
 
@@ -103,5 +108,5 @@ gulp.task('default', function (callback) {
 
 
 gulp.task('build', function (callback) {
-    runSequence(['clean:dist', 'sass', 'useref', 'images', 'libs'], callback)
+    runSequence(['clean:dist', 'sass', 'useref', 'fonts', 'images', 'libs'], callback)
 });
