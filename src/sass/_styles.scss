@@ -6,11 +6,13 @@
 
 }
 .header {
+  background: #fff;
   @include breakpoint(sm-down) {
    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
+    z-index: 99998;
   }
   &__top {
     display: flex;
@@ -19,10 +21,10 @@
     position: relative;
     justify-content: space-between;
     align-items: center;
-    min-height: 170px;
+    height: 170px;
     padding: 20px 0;
     @include breakpoint(sm-down) {
-      min-height: 100px;
+      height: 130px;
       padding: 15px 0;
     }
     h1,.h1 {
@@ -218,4 +220,248 @@
     color: #fff;
     border-bottom: 1px solid #fff;
   }
+}
+
+
+.main {
+  @include breakpoint(sm-down) {
+    padding-top: 131px;
+  }
+}
+
+.mainSlider {
+  &__item {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: 25px 0;
+    min-height: 594px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include breakpoint(sm-down) {
+      min-height: 394px;
+    }
+  }
+  &__item--1 {
+    background-image: url("../img/001.jpg");
+  }
+  &__item--2 {
+    background-image: url("../img/002.jpg");
+  }
+  &__item--3 {
+    background-image: url("../img/003.jpg");
+  }
+  &__container {
+    width: 1190px;
+    padding: 0 10px;
+    margin: 0 auto;
+    @include breakpoint(lg-down) {
+      width: 100%;
+    }
+  }
+  &__text {
+    max-width: 425px;
+    margin: -9px 0 0 0;
+    p {
+      color: #fff;
+      font-size: 36px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0 0 48px 0;
+      line-height: 1.3;
+    }
+  }
+  &__btn {
+    font-size: 18px;
+    text-transform: none;
+    min-width: 222px;
+  }
+  .owl-carousel {
+
+    .owl-dots {
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      bottom: 45px;
+      height: 8px;
+      @include breakpoint(sm-down) {
+        bottom: 25px;
+      }
+      div {
+        margin: 0 6px;
+        display: inline-block;
+        vertical-align: top;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: #fff;
+        &.active {
+          background: #00ad4e;
+        }
+      }
+    }
+
+  }
+}
+
+.inner {
+  background: url("../img/inner-bg.png") center top no-repeat;
+}
+
+.products {
+  padding: 94px 0 56px 0;
+  @include breakpoint(sm-down) {
+    padding: 40px 0;
+  }
+  .container {
+    flex-direction: column;
+  }
+}
+.title {
+  &__head {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+    text-transform: uppercase;
+    padding: 0 19px 0 0;
+    @include breakpoint(sm-down) {
+      display: block;
+      margin-bottom: 15px;
+    }
+  }
+  &__btn {
+    min-width: 223px;
+  }
+}
+
+.productsSlider {
+  padding: 62px 0 0 0;
+  @include breakpoint(sm-down) {
+    padding-top: 40px;
+  }
+  &__item {
+    a {
+      text-decoration: none;
+    }
+    figure {
+      overflow: hidden;
+      img {
+        transition: all 0.5s ease;
+      }
+      &:hover {
+        img {
+          transform: scale(1.5);
+        }
+      }
+    }
+    h3 {
+      padding: 4px 0 0 0;
+      font-size: 16px;
+    }
+  }
+}
+
+.owl-carousel--arrowsRT {
+  .owl-nav {
+    position: absolute;
+    right: 0;
+    top: -95px;
+    @include breakpoint(sm-down) {
+      top: -30px;
+    }
+    div {
+      top: 0;
+      text-indent: -9000px;
+      width: 13px;
+      height: 18px;
+      position: absolute;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+  div.owl-prev {
+    right: 34px;
+    background: url("../img/left-arrow.png") no-repeat;
+  }
+  div.owl-next {
+    right: 0;
+    background: url("../img/right-arrow.png") no-repeat;
+  }
+}
+
+.recipes {
+  background: #f5f5f5;
+  padding: 106px 0 97px 0;
+  @include breakpoint(sm-down) {
+    padding: 40px 0;
+  }
+  .container {
+    flex-direction: column;
+  }
+}
+
+.recipesSlider {
+  padding: 62px 0 0 0;
+  &__item {
+    h3 {
+      font-size: 27px;
+      margin: 0;
+      padding: 28px 0 13px 0;
+      a {
+        color: #333;
+        text-decoration: none;
+        &:hover {
+          color: #00ad4e;
+        }
+      }
+    }
+    p {
+      margin: 0;
+      line-height: 1.5;
+    }
+  }
+}
+
+.dish {
+  position: relative;
+  img {
+    width: 100%;
+  }
+  &__item {
+    text-decoration: none;
+  }
+}
+.dishList {
+  width: 120px;
+  background: hsla(0, 100%, 0%,0.75);
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 30px 0;
+  @include breakpoint(sm-down) {
+    padding: 0;
+  }
+  li {
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    @include breakpoint(sm-down) {
+      padding: 0;
+    }
+    span {
+      padding: 2px 13px 0 13px;
+      font-size: 12px;
+      display: block;
+    }
+  }
+}
+
+.news {
+  padding: 83px 0 0 0;
 }
