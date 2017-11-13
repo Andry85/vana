@@ -36,6 +36,11 @@
                 controller.toggle('slidebar');
             }
         } );
+        $( '.cloze-slidebar' ).on( 'click', function ( event ) {
+            event.preventDefault();
+            event.stopPropagation();
+            controller.close('slidebar');
+        } );
     /*********************************************************/
     /* start mobile menu  */
     /********************************************************/
@@ -64,9 +69,6 @@
         nav: true,
         responsive:{
             0:{
-                items: 1,
-            },
-            480:{
                 items: 2,
                 margin: 15
             },
