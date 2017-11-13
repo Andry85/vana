@@ -24,7 +24,7 @@
     height: 170px;
     padding: 20px 0;
     @include breakpoint(sm-down) {
-      height: 130px;
+      height: 100px;
       padding: 15px 0;
     }
     h1,.h1 {
@@ -237,10 +237,9 @@
 
 }
 
-
 .main {
   @include breakpoint(sm-down) {
-    padding-top: 131px;
+    padding-top: 101px;
   }
 }
 
@@ -320,6 +319,7 @@
 
 .inner {
   background: url("../img/inner-bg.png") center top no-repeat;
+  min-height: 563px;
 }
 
 .products {
@@ -703,3 +703,123 @@ a.subscription {
     margin: 0 0 0 14px;
   }
 }
+
+.pageBanner {
+  height: 172px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  &--news {
+    background-image: url("../img/pageBanner--news-bg.jpg");
+  }
+}
+
+.breadcrumb {
+  padding: 23px 0;
+  li {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 0 0 10px;
+    &:before {
+      content: '/';
+      position: absolute;
+      left: 1px;
+      top: -1px;
+      color: #111;
+    }
+    &:first-child {
+      padding-left: 0;
+      &:before {
+        display: none;
+      }
+    }
+    a {
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.page {
+  .container {
+    flex-direction: column;
+  }
+}
+.newsPage {
+  padding: 32px 0 89px 0;
+  h1 {
+    text-align: center;
+    margin: 0;
+  }
+  .newsList {
+    li {
+      margin-bottom: 60px;
+    }
+  }
+}
+.pageNavi {
+  display: flex;
+  justify-content: center;
+  li {
+    a {
+      margin: 0 2px;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      border-radius: 50%;
+      text-decoration: none;
+      background: #f3f5f8;
+      display: block;
+      text-align: center;
+      color: #b2b2b2;
+      font-weight: bold;
+      &:hover {
+        color: #fff;
+        background: #00ad4e;
+      }
+      i {
+        position: relative;
+        top: 2px;
+        width: 10px;
+        height: 16px;
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-position: left top;
+      }
+    }
+    &.activ {
+      a {
+        color: #fff;
+        background: #00ad4e;
+      }
+    }
+  }
+  &__prew {
+    a {
+      i {
+        background-image: url("../img/pageNavi-left.png");
+      }
+      &:hover {
+        i {
+          background-image: url("../img/pageNavi-left-hover.png");
+        }
+      }
+    }
+  }
+  &__next {
+    a {
+      i {
+        background-image: url("../img/pageNavi-right.png");
+      }
+      &:hover {
+        i {
+          background-image: url("../img/pageNavi-right-hover.png");
+        }
+      }
+    }
+  }
+}
+
