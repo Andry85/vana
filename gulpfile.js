@@ -90,7 +90,7 @@ gulp.task('images', function() {
 
 
 gulp.task('libs', function() {
-    return gulp.src('src/video/**/*')
+    return gulp.src('src/libs/**/*')
         .pipe(gulp.dest('dist/libs'))
 });
 
