@@ -131,6 +131,38 @@
     /********************************************************/
 
 
+    /*********************************************************/
+    /* Start TABS  */
+    /********************************************************/
+    $('.officesPlacesList li a').on('click', function(e){
+        e.preventDefault();
+        var $tabs = $(".tabs");
+        var $text = $(this).text();
+        var $tabsList = $tabs.children();
+        $(this).parent('li').addClass('officesPlacesList__item--activ').siblings().removeClass('officesPlacesList__item--activ');
+        var $parent = $(this).parent('li');
+        var $parentIndex = $parent.index();
+        var $current = $tabsList[$parentIndex];
+        $($current).addClass('activ').siblings().removeClass('activ');
+        $('.officesPlaces__city i').text($text);
+        $(this).parents('.officesPlacesListWrap').slideUp();
+    });
+    $('.officesPlaces__city i').on('click', function(e){
+        var officesListWrap = $(this).next('.officesPlacesListWrap');
+        var isVisible = officesListWrap.is(':visible');
+        if (isVisible === true) {
+            officesListWrap.slideUp();
+        } else {
+            officesListWrap.slideDown();
+        }
+
+    });
+
+    /*********************************************************/
+    /* End TABS  */
+    /********************************************************/
+
+
 
 
 

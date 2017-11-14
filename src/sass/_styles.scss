@@ -715,6 +715,15 @@ a.subscription {
   &--brand {
     background-image: url("../img/pageBanner--brand-bg.jpg");
   }
+  &--recipes {
+    background-image: url("../img/pageBanner--recipes-bg.jpg");
+  }
+  &--contacts {
+    background-image: url("../img/pageBanner--contacts-bg.jpg");
+  }
+  &--offices {
+    background-image: url("../img/pageBanner--offices-bg.jpg");
+  }
 }
 
 .breadcrumb {
@@ -1067,3 +1076,136 @@ a.subscription {
     }
   }
 }
+
+.contactsList {
+  padding: 77px 0 0 0;
+  @include breakpoint(xs-down) {
+    padding-top: 25px;
+  }
+  &__item {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0 69px 0;
+    @include breakpoint(xs-down) {
+      padding-bottom: 25px;
+    }
+  }
+  &__pic {
+    flex-basis: 113px;
+    flex-grow: 0;
+    @include breakpoint(xs-down) {
+      flex-basis: 100%;
+      text-align: center;
+    }
+  }
+  &__text {
+    flex-basis: 300px;
+    flex-grow: 1;
+    padding: 20px 0 0 17px;
+    @include breakpoint(xs-down) {
+      flex-basis: 100%;
+      padding: 25px 0 0 0;
+    }
+    h2 {
+      margin: 0;
+      font-size: 24px;
+      padding: 0 0 16px 0;
+    }
+    p {
+      font-size: 16px;
+      color: #666;
+      margin: 0;
+      line-height: 1.7;
+    }
+    address {
+      font-style: normal;
+      padding: 27px 0 0 0;
+      a {
+        color: #666;
+      }
+    }
+  }
+
+}
+
+.contactMap {
+  margin: 19px 0 123px 0;
+  @include breakpoint(xs-down) {
+    margin: 0 0 25px 0;
+  }
+  iframe {
+    width: 100%;
+  }
+}
+
+.officesPlaces {
+  padding: 107px 0 0 0;
+  &__map {
+    iframe {
+      width: 100%;
+    }
+  }
+  &__city {
+    position: relative;
+    display: inline-block;
+  }
+  &__region {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  &__select {
+    margin: 0 0 63px 0;
+    i {
+      font-size: 24px;
+      font-weight: bold;
+      font-style: normal;
+      color: #333;
+      text-decoration: underline;
+      cursor: pointer;
+      margin: 0 0 0 6px;
+    }
+  }
+}
+.tabs {}
+.tab {
+  display: none;
+}
+.tab.activ {
+  display: block;
+}
+
+.officesPlacesListWrap {
+  position: absolute;
+  left: 0;
+  top: 33px;
+  display: none;
+}
+
+.officesPlacesList {
+  background: #fff;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 28px 44px 28px 40px;
+  justify-content: space-between;
+  box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.1);
+  width: 620px;
+  margin: 8px 0 0 0;
+  &__item {
+    flex-basis: 146px;
+    padding: 9px 0 10px 0;
+    a {
+      font-size: 16px;
+      &:hover {
+        color: #00ad4e;
+        text-decoration: none;
+      }
+    }
+    &--activ {
+      a {
+        color: #00ad4e;
+      }
+    }
+  }
+}
+
