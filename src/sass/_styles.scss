@@ -712,6 +712,9 @@ a.subscription {
   &--news {
     background-image: url("../img/pageBanner--news-bg.jpg");
   }
+  &--brand {
+    background-image: url("../img/pageBanner--brand-bg.jpg");
+  }
 }
 
 .breadcrumb {
@@ -747,13 +750,13 @@ a.subscription {
   .container {
     flex-direction: column;
   }
-}
-.newsPage {
-  padding: 32px 0 89px 0;
   h1 {
     text-align: center;
     margin: 0;
   }
+}
+.newsPage {
+  padding: 32px 0 89px 0;
   .newsList {
     li {
       margin-bottom: 60px;
@@ -823,3 +826,244 @@ a.subscription {
   }
 }
 
+.newsOnePage {
+  padding: 32px 0 75px 0;
+  h1 {
+    @include breakpoint(sm-down) {
+      font-size: 26px;
+    }
+  }
+}
+
+.publication {
+  text-align: center;
+  padding: 26px 0 0 0;
+  color: #a1a1a1;
+  font-size: 12px;
+  font-weight: bold;
+  i {
+    position: relative;
+    top: 3px;
+    margin-right: 1px;
+  }
+}
+.newsItem {
+  padding: 52px 0 0 0;
+  h2 {
+    margin: 63px 0 0 0;
+    padding: 0 0 17px 0;
+    @include breakpoint(sm-down) {
+      margin-top: 25px;
+    }
+  }
+  p {
+    color: #666;
+    line-height: 1.5;
+    padding: 0 0 15px 0;
+  }
+}
+.navi {
+  padding: 54px 0 0 0;
+  display: flex;
+  justify-content: center;
+  @include breakpoint(sm-down) {
+    padding-top: 10px;
+  }
+  li {
+    padding: 0 15px;
+    @include breakpoint(sm-down) {
+      padding: 0 5px;
+    }
+    a {
+      color: #00ad4e;
+      font-size: 27px;
+      @include breakpoint(sm-down) {
+        font-size: 14px;
+      }
+      i {
+        margin: 0 13px;
+        @include breakpoint(sm-down) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.brandPage {
+
+}
+.brandPagePreambule {
+  display: flex;
+  padding: 28px 0;
+  &__pic {
+    flex-basis: 405px;
+    flex-grow: 0;
+    @include breakpoint(sm-down) {
+      display: none;
+    }
+  }
+  &__text {
+    padding: 50px 0 0 0;
+    flex-basis: 405px;
+    flex-grow: 1;
+    @include breakpoint(sm-down) {
+      padding-top: 0;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.6;
+      padding: 7px 0;
+    }
+  }
+}
+
+.brandServices {
+  background: url("../img/brandServices-bg.jpg") center center no-repeat;
+  background-size: cover;
+  height: 426px;
+  padding: 30px 0;
+  margin-bottom: 18px;
+  @include breakpoint(sm-down) {
+    height: auto;
+  }
+  color: #fff;
+  .container {
+    height: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    @include breakpoint(lg-down) {
+      justify-content: center;
+    }
+    p {
+        text-align: center;
+        flex-basis: 345px;
+        font-size: 21px;
+        padding: 0 10px;
+    }
+  }
+}
+
+.brandPagePostambule  {
+  padding: 27px 0 44px 0;
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 7px 0;
+  }
+}
+.brandPageSlider {
+  padding: 11px 0 0 0;
+  h2 {
+    margin: 0 0 29px 0;
+  }
+  .owl-carousel--arrowsRT {
+    .owl-nav {
+      top: -51px;
+    }
+  }
+}
+
+.recipesPage {
+  padding: 0 0 89px 0;
+  @include breakpoint(sm-down) {
+    padding-bottom: 35px;
+  }
+}
+.recipesList {
+  padding: 61px 0 50px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include breakpoint(sm-down) {
+    padding: 25px 0;
+  }
+  &__item {
+    flex-basis: 32.22%;
+    margin: 0 0 41px 0;
+    @include breakpoint(md-down) {
+      flex-basis: 48%;
+    }
+    @include breakpoint(xs-down) {
+      flex-basis: 100%;
+    }
+  }
+}
+.dishBox {
+  &__body {
+    position: relative;
+    figure {
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &__list {
+    width: 100%;
+    min-height: 60px;
+    background: hsla(0, 100%, 0%,0.75);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 5px;
+    li {
+      color: #fff;
+      position: relative;
+      i {
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+      span {
+        padding: 0 0 0 27px;
+        font-size: 12px;
+        display: block;
+        b {
+          font-weight: normal;
+          display: block;
+          @include breakpoint(lg-down) {
+            display: none;
+          }
+        }
+      }
+    }
+    li:nth-child(1) {
+      flex-basis: 80px;
+      @include breakpoint(lg-down) {
+        flex-basis: auto;
+      }
+    }
+    li:nth-child(2) {
+      flex-basis: 122px;
+      span {
+        padding-left: 33px;
+      }
+      @include breakpoint(lg-down) {
+        flex-basis: auto;
+      }
+    }
+    li:nth-child(3) {
+      flex-basis: 120px;
+      @include breakpoint(lg-down) {
+        flex-basis: auto;
+      }
+    }
+  }
+  &__title {
+    font-size: 21px;
+    color: #333;
+    margin: 6px 0 0 0;
+    a {
+      color: #333;
+      &:hover {
+        text-decoration: none;
+        color: #00ad4e;
+      }
+    }
+  }
+}
