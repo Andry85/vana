@@ -730,7 +730,10 @@ a.subscription {
 }
 
 .breadcrumb {
-  padding: 23px 0;
+  padding: 23px 0 73px 0;
+  @include breakpoint(sm-down) {
+    padding-bottom: 43px;
+  }
   li {
     position: relative;
     display: inline-block;
@@ -768,7 +771,7 @@ a.subscription {
   }
 }
 .newsPage {
-  padding: 32px 0 89px 0;
+  padding: 0 0 89px 0;
   .newsList {
     li {
       margin-bottom: 60px;
@@ -839,7 +842,7 @@ a.subscription {
 }
 
 .newsOnePage {
-  padding: 32px 0 75px 0;
+  padding: 0 0 75px 0;
   h1 {
     @include breakpoint(sm-down) {
       font-size: 26px;
@@ -1472,5 +1475,186 @@ a.subscription {
   padding: 0 0 89px 0;
   @include breakpoint(md-down) {
     padding-bottom: 20px;
+  }
+}
+
+.productPage {
+  padding: 0 0 80px 0;
+}
+.productInner {
+  padding: 98px 0 80px 0;
+  display: flex;
+  justify-content: space-between;
+  @include breakpoint(md-down) {
+    flex-wrap: wrap;
+  }
+  @include breakpoint(sm-down) {
+    padding: 38px 0 30px 0;
+  }
+  &__item {
+    flex-basis: 308px;
+    flex-shrink: 0;
+    @include breakpoint(md-down) {
+      flex-basis: 45%;
+      flex-shrink: 1;
+    }
+    @include breakpoint(xxs-down) {
+      flex-basis: 100%;
+    }
+    figure {
+      padding: 0 0 36px 0;
+      @include breakpoint(xxs-down) {
+        text-align: center;
+      }
+    }
+  }
+  &__btn {
+    min-width: 278px;
+    @include breakpoint(sm-down) {
+      min-width: auto;
+      width: 100%;
+      line-height: inherit;
+      padding: 16px 10px;
+    }
+  }
+  &__body {
+    flex-basis: 765px;
+    @include breakpoint(md-down) {
+      flex-basis: 45%;
+    }
+    @include breakpoint(xxs-down) {
+      flex-basis: 100%;
+      padding-top: 25px;
+    }
+  }
+  &__text {
+  }
+  &__title {
+    margin: 0 0 12px 0;
+  }
+  &__content {
+    line-height: 1.6;
+    margin: 0;
+  }
+}
+.productInfo {
+  padding: 48px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &__item {
+    flex-basis: 192px;
+    @include breakpoint(md-down) {
+      flex-basis: 100%;
+      padding-bottom: 15px;
+    }
+    &:first-child {
+      flex-basis: 295px;
+      @include breakpoint(md-down) {
+        flex-basis: 100%;
+      }
+    }
+  }
+  &__title {
+    font-size: 27px;
+    margin: 0 0 30px 0;
+  }
+  &__text {
+    margin: 0;
+  }
+}
+.productInfoList {
+  &__item {
+    position: relative;
+    margin: 0 0 24px 0;
+    padding: 0 0 0 13px;
+    &:before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #00ad4e;
+      position: absolute;
+      left: 0;
+      top: 8px;
+    }
+  }
+}
+
+.advertisingPopap {
+  background: hsla(0, 100%, 0%,0.5);
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100000;
+  &__inner {
+    width: 840px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 3px;
+    padding: 58px 65px 63px 65px;
+    @include breakpoint(md-down) {
+      width: 90%;
+    }
+    @include breakpoint(sm-down) {
+      padding: 40px 10px 20px 10px;
+    }
+  }
+  &__cloze {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  &__title {
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    @include breakpoint(sm-down) {
+      font-size: 18px;
+    }
+
+  }
+}
+.advertisingPopapList {
+  padding: 62px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include breakpoint(sm-down) {
+    padding-top: 15px;
+  }
+  @include breakpoint(sm-down) {
+    justify-content: center;
+  }
+  li {
+    a {
+      width: 215px;
+      height: 215px;
+      text-decoration: none;
+      background: #fff;
+      border-radius: 3px;
+      box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      @include breakpoint(md-down) {
+        width: 180px;
+        height: 180px;
+      }
+      @include breakpoint(sm-down) {
+        height: 130px;
+        margin-bottom: 10px;
+      }
+    }
   }
 }

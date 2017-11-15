@@ -155,7 +155,6 @@
         } else {
             officesListWrap.slideDown();
         }
-
     });
 
     /*********************************************************/
@@ -188,6 +187,11 @@
     /********************************************************/
 
 
+    $('.advertisingPopap__cloze').on('click', function(e){
+        event.preventDefault();
+        $(this).parents('.advertisingPopap').fadeOut();
+
+    });
 
 
 
