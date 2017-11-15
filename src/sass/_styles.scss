@@ -724,6 +724,9 @@ a.subscription {
   &--offices {
     background-image: url("../img/pageBanner--offices-bg.jpg");
   }
+  &--products {
+    background-image: url("../img/pageBanner--products-bg.jpg");
+  }
 }
 
 .breadcrumb {
@@ -1138,8 +1141,18 @@ a.subscription {
   }
 }
 
+.officesPage {
+  padding: 0 0 104px 0;
+  @include breakpoint(md-down) {
+    padding-bottom: 50px;
+  }
+}
+
 .officesPlaces {
-  padding: 107px 0 0 0;
+  padding: 107px 0 90px 0;
+  @include breakpoint(md-down) {
+    padding: 55px 0;
+  }
   &__map {
     iframe {
       width: 100%;
@@ -1148,6 +1161,9 @@ a.subscription {
   &__city {
     position: relative;
     display: inline-block;
+    @include breakpoint(md-down) {
+      position: static;
+    }
   }
   &__region {
     font-size: 24px;
@@ -1155,6 +1171,7 @@ a.subscription {
   }
   &__select {
     margin: 0 0 63px 0;
+    position: relative;
     i {
       font-size: 24px;
       font-weight: bold;
@@ -1191,9 +1208,25 @@ a.subscription {
   box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.1);
   width: 620px;
   margin: 8px 0 0 0;
+  @include breakpoint(md-down) {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  @include breakpoint(sm-down) {
+    padding: 18px 24px 18px 20px;
+  }
   &__item {
     flex-basis: 146px;
     padding: 9px 0 10px 0;
+    @include breakpoint(md-down) {
+      flex-basis: 20%;
+    }
+    @include breakpoint(sm-down) {
+      flex-basis: 33.3%;
+    }
+    @include breakpoint(xs-down) {
+      flex-basis: 50%;
+    }
     a {
       font-size: 16px;
       &:hover {
@@ -1209,3 +1242,235 @@ a.subscription {
   }
 }
 
+.offer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  &__entry {
+    flex-basis: 405px;
+    &--long {
+      flex-basis: 473px;
+    }
+    @include breakpoint(md-down) {
+      flex-basis: 50%;
+    }
+    @include breakpoint(sm-down) {
+      flex-basis: 100%;
+      margin-bottom: 18px;
+    }
+  }
+  &__title {
+    font-size: 24px;
+    margin: 19px 0 21px 0;
+    @include breakpoint(md-down) {
+      margin-top: 5px;
+      font-size: 20px;
+    }
+  }
+  &__text {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0 0 10px 0;
+    @include breakpoint(md-down) {
+      font-size: 14px;
+    }
+  }
+  &__btn {
+    margin-top: 24px;
+    min-width: 238px;
+    &--log {
+      min-width: 278px;
+      @include breakpoint(md-down) {
+        min-width: 238px;
+      }
+    }
+    @include breakpoint(md-down) {
+      margin-top: 6px;
+    }
+  }
+  &__link {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    vertical-align: middle;
+    text-decoration: underline;
+    margin: 24px 0 0 26px;
+    @include breakpoint(md-down) {
+      margin: 6px 0 0 6px;
+    }
+  }
+  &__pic {
+    flex-basis: 502px;
+    img {
+      width: 100%;
+    }
+    @include breakpoint(md-down) {
+      flex-basis: 45%;
+    }
+    @include breakpoint(sm-down) {
+      flex-basis: 100%;
+    }
+  }
+}
+
+.shops {
+  padding: 103px 0 0 0;
+  @include breakpoint(md-down) {
+    padding-top: 50px;
+  }
+  &__title {
+    font-size: 24px;
+    margin: 0 0 13px 0;
+    @include breakpoint(md-down) {
+      font-size: 20px;
+    }
+  }
+  &__text {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.7;
+    margin: 0;
+    @include breakpoint(md-down) {
+      font-size: 14px;
+    }
+  }
+}
+
+.productsPage {
+
+}
+.catalogProducts {
+  padding: 40px 0 0 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  &__title {
+
+  }
+  &__slogan {
+    display: inline-block;
+    font-size: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    background: #00ad4e;
+    line-height: 21px;
+    padding: 0 3px 0 4px;
+    position: relative;
+    margin: 0 11px 0 0;
+    &:before {
+      content: '';
+      position: absolute;
+      right: -6px;
+      top: 0;
+      width: 0;
+      height: 0;
+      border-top: 11px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 6px solid #00ad4e;
+    }
+  }
+  &__text {
+    padding: 0 12px 0 0;
+    border-right: 1px solid #b4bab6;
+    display: inline-block;
+    color: #00ad4e;
+    font-size: 16px;
+    line-height: 40px;
+  }
+  &__item {
+    a {
+      font-size: 16px;
+      border-radius: 2px;
+      border: 1px solid #b4bab6;
+      display: block;
+      margin: 3px 8px;
+      padding: 0 14px;
+      text-align: center;
+      line-height: 30px;
+      text-decoration: none;
+      &:hover {
+        color: #fff;
+        background: #00ad4e;
+        border-color: #00ad4e;
+      }
+    }
+    &--active {
+      a {
+        color: #fff;
+        background: #00ad4e;
+        border-color: #00ad4e;
+      }
+    }
+  }
+}
+
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 47px 0 0 0;
+  @include breakpoint(md-down) {
+    padding-top: 27px;
+  }
+  &__item {
+    flex-basis: 22.99%;
+    margin: 0 0 50px 0;
+    @include breakpoint(md-down) {
+      flex-basis: 30%;
+    }
+    @include breakpoint(xs-down) {
+      flex-basis: 48%;
+    }
+    a {
+      color: #333;
+      text-decoration: none;
+      &:hover {
+        color: #019f53;
+      }
+    }
+    figure {
+      img {
+        width: 100%;
+      }
+    }
+    h4 {
+      margin: 24px 0 0 0;
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+}
+
+.recipesWrap {
+  background: #f5f5f5;
+  padding: 63px 0 29px 0;
+  margin: 0 0 93px 0;
+  @include breakpoint(md-down) {
+    padding: 15px  0;
+    margin-bottom: 20px;
+  }
+}
+
+.recipesCarusel {
+  padding: 11px 0 0 0;
+  h2 {
+    margin: 0 0 29px 0;
+    @include breakpoint(md-down) {
+      font-size: 22px;
+    }
+  }
+  .owl-carousel--arrowsRT {
+    .owl-nav {
+      top: -51px;
+    }
+  }
+}
+.offerWrap {
+  padding: 0 0 89px 0;
+  @include breakpoint(md-down) {
+    padding-bottom: 20px;
+  }
+}
