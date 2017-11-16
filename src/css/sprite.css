@@ -24,19 +24,19 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-camera {
   background-image: url(../img/sprite.png);
-  background-position: 0px -74px;
+  background-position: 0px -132px;
   width: 30px;
   height: 22px;
 }
 .icon-comment {
   background-image: url(../img/sprite.png);
-  background-position: 0px -96px;
+  background-position: 0px -154px;
   width: 21px;
   height: 22px;
 }
 .icon-icon-1-clock {
   background-image: url(../img/sprite.png);
-  background-position: 0px -118px;
+  background-position: 0px -110px;
   width: 22px;
   height: 22px;
 }
@@ -66,13 +66,31 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
 }
 .icon-out {
   background-image: url(../img/sprite.png);
-  background-position: 0px -140px;
+  background-position: 0px -200px;
   width: 23px;
   height: 26px;
 }
+.icon-print {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -176px;
+  width: 24px;
+  height: 24px;
+}
 .icon-settings {
   background-image: url(../img/sprite.png);
-  background-position: 0px -166px;
+  background-position: 0px -226px;
   width: 26px;
   height: 26px;
+}
+.icon-star-activ {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -74px;
+  width: 19px;
+  height: 18px;
+}
+.icon-star {
+  background-image: url(../img/sprite.png);
+  background-position: 0px -92px;
+  width: 19px;
+  height: 18px;
 }

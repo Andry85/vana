@@ -30,15 +30,15 @@
         mobileOnly();
         $(window).on( 'resize', mobileOnly );
 
-        $( '.js-toggle-menu' ).on( 'click', function ( event ) {
-            event.stopPropagation();
+        $( '.js-toggle-menu' ).on( 'click', function (e) {
+            e.stopPropagation();
             if ( windowWidth < 768 ) {
                 controller.toggle('slidebar');
             }
         } );
-        $( '.cloze-slidebar' ).on( 'click', function ( event ) {
-            event.preventDefault();
-            event.stopPropagation();
+        $( '.cloze-slidebar' ).on( 'click', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
             controller.close('slidebar');
         } );
     /*********************************************************/
@@ -110,7 +110,6 @@
     /* start brand slider   */
     /********************************************************/
     $('.brandPageSlider .owl-carousel').owlCarousel({
-        autoHeight:true,
         nav: true,
         responsive:{
             0:{
@@ -191,7 +190,7 @@
     /* start popap   */
     /********************************************************/
     $('.popap__cloze').on('click', function(e){
-        event.preventDefault();
+        e.preventDefault();
         $(this).parents('.popap').fadeOut();
 
     });
@@ -212,22 +211,37 @@
         changePanelWidth();
         $(window).resize(changePanelWidth);
         function changePanelWidth() {
-            var avatar = $("#avatar");
-            var offset = avatar.offset();
-            var wit = $(window).width();
-            var panelWidth = wit - offset.left;
-            $('.panel').width(panelWidth+12);
+            if ($("#avatar").length ) {
+                var avatar = $("#avatar");
+                var off = avatar.offset();
+                var wit = $(window).width();
+                var panelWidth = wit - off.left;
+                $('.panel').width(panelWidth+12);
+            }
         };
         $('.out').on('click', function(e){
             e.preventDefault();
             $(this).parents('.panel').fadeOut('slow');
         });
         $('#avatar').on('click', function(e){
-            $(this).parents('body').find('.panel').show();
+            $(this).parents('body').find('.panel').fadeIn();
         });
     /*********************************************************/
     /* start user cabinet   */
     /********************************************************/
+
+    /*********************************************************/
+    /* start recipes main slider   */
+    /********************************************************/
+    $('.similarRecipeList .owl-carousel').owlCarousel({
+        autoHeight:true,
+        nav: true,
+        items: 1
+    });
+    /*********************************************************/
+    /* end recipes main slider  */
+    /********************************************************/
+
 
 
 
