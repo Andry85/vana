@@ -59,7 +59,10 @@ textarea {
     background: #0b7a3d;
     text-decoration: none;
   }
-  &.cancel {
+  &--cancel {
     background: #898989;
+    &:hover {
+      background: #726e6e;
+    }
   }
 }

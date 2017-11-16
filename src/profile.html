@@ -44,10 +44,12 @@
 							<li class="activ"><a href="#" title="">Ru</a></li>
 							<li><a href="#" title="">Eng</a></li>
 						</ul>
-						<ul class="settings">
-							<li><a href="#" title="">Вход</a></li>
-							<li><a href="#" title="">Регистрация</a></li>
-						</ul>
+						<div id="avatar" class="userAvatar">
+							<figure class="userAvatar__pic">
+								<img src="img/018.jpg" alt="" title="">
+							</figure>
+							<p class="userAvatar__name"><span>Киррил Петрович</span></p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -75,264 +77,80 @@
 					<div class="container">
 						<ul class="breadcrumb">
 							<li><a href="#" title="">Главная</a></li>
-							<li>Рецепты</li>
+							<li>Личный кабинет</li>
 						</ul>
-						<div class="recipesPage">
-							<h1>Рецепты</h1>
-							<ul class="recipesList">
-								<li class="recipesList__item">
-									<div class="dishBox">
-										<div class="dishBox__body">
-											<figure>
-												<a href="#" title="">
-													<img src="img/013.jpg" alt="" title="">
-												</a>
-											</figure>
-											<ul class="dishBox__list">
-												<li>
-													<i class="icon icon-icon-1-clock"></i>
-													<span><b>Готовить</b> 35 минут</span>
-												</li>
-												<li>
-													<i class="icon icon-icon-2-speed"></i>
-													<span><b>Каллорийность</b> 240ккал/100г</span>
-												</li>
-												<li>
-													<i class="icon icon-comment"></i>
-													<span>128<b>комментрариев</b></span>
-												</li>
-											</ul>
+						<div class="profilePage">
+							<aside class="profilePage__sidebar">
+								<figure class="avatar">
+									<img src="img/avatar.jpg" alt="" title="">
+								</figure>
+								<a class="changePhoto" href="#" title="">
+									<i class="icon icon-camera"></i>
+									<span>Поменять фото</span>
+								</a>
+							</aside>
+							<div class="profilePage__content">
+								<form method="post" action="#">
+									<section class="profilePage__box">
+										<h2>Настройки профиля</h2>
+										<div class="profilePage__fields">
+											<div class="formGroup">
+												<label class="formLabel" for="formInputName">Имя</label>
+												<input id="formInputName" class="formInput" type="text" placeholder="Киррил" tabindex="1">
+											</div>
+											<div class="formGroup">
+												<label class="formLabel" for="formInputSecondName">Фамилия</label>
+												<input id="formInputSecondName" class="formInput" type="text" placeholder="Петрович" tabindex="2">
+											</div>
+											<div class="formGroup">
+												<label class="formLabel" for="formInputbirthday">Дата рождения:</label>
+												<input id="formInputbirthday" class="formInput" type="date" placeholder="дд.мм.гггг" tabindex="3">
+											</div>
+											<div class="formGroup">
+												<label class="formLabel" for="formInputPhone">Контактный телефон</label>
+												<input id="formInputPhone" class="formInput" type="tel" placeholder="+7 (906) 564-23-56" tabindex="4">
+											</div>
+											<div class="formGroup">
+												<label class="formLabel">Название региона</label>
+												<select class="customSelect" style="width: 100%" tabindex="5">
+													<option selected value="0">Регион</option>
+													<option value="1">Москва</option>
+													<option value="2">Санкт Петербург</option>
+													<option value="3">Воркута</option>
+												</select>
+											</div>
+											<div class="formGroup">
+												<label class="formLabel">Населенный пункт</label>
+												<select class="customSelect" style="width: 100%" tabindex="6">
+													<option selected value="0">Населенный пункт</option>
+													<option value="1">Москва</option>
+													<option value="2">Санкт Петербург</option>
+													<option value="3">Воркута</option>
+												</select>
+											</div>
 										</div>
-										<h2 class="dishBox__title"><a href="#" title="">Запеченное мясо с помидорами и сыром</a></h2>
-									</div>
-								</li>
-								<li class="recipesList__item">
-									<div class="dishBox">
-										<div class="dishBox__body">
-											<figure>
-												<a href="#" title="">
-													<img src="img/014.jpg" alt="" title="">
-												</a>
-											</figure>
-											<ul class="dishBox__list">
-												<li>
-													<i class="icon icon-icon-1-clock"></i>
-													<span><b>Готовить</b> 35 минут</span>
-												</li>
-												<li>
-													<i class="icon icon-icon-2-speed"></i>
-													<span><b>Каллорийность</b> 240ккал/100г</span>
-												</li>
-												<li>
-													<i class="icon icon-comment"></i>
-													<span>128<b>комментрариев</b></span>
-												</li>
-											</ul>
+									</section>
+									<section class="profilePage__box">
+										<h2>Смена пароля</h2>
+										<div class="profilePage__fields">
+											<div class="formGroup">
+												<label class="formLabel" for="formInputOldPass">Старый пароль</label>
+												<input id="formInputOldPass" class="formInput" type="password" placeholder="password" tabindex="7">
+											</div>
+											<div class="formGroup">
+												<label class="formLabel" for="formInputNewPass">Новый пароль</label>
+												<input id="formInputNewPass" class="formInput" type="password" placeholder="password" tabindex="8">
+											</div>
+											<div class="formGroup">
+												<button class="btn" tabindex="9">сохранить изменения</button>
+											</div>
+											<div class="formGroup">
+												<button class="btn btn--cancel" tabindex="10">отмена</button>
+											</div>
 										</div>
-										<h2 class="dishBox__title"><a href="#" title="">Тосты с гуакамоле и белой фасолью</a></h2>
-									</div>
-								</li>
-								<li class="recipesList__item">
-									<div class="dishBox">
-										<div class="dishBox__body">
-											<figure>
-												<a href="#" title="">
-													<img src="img/013.jpg" alt="" title="">
-												</a>
-											</figure>
-											<ul class="dishBox__list">
-												<li>
-													<i class="icon icon-icon-1-clock"></i>
-													<span><b>Готовить</b> 35 минут</span>
-												</li>
-												<li>
-													<i class="icon icon-icon-2-speed"></i>
-													<span><b>Каллорийность</b> 240ккал/100г</span>
-												</li>
-												<li>
-													<i class="icon icon-comment"></i>
-													<span>128<b>комментрариев</b></span>
-												</li>
-											</ul>
-										</div>
-										<h2 class="dishBox__title"><a href="#" title="">Фасоль зеленая с черри, чесноком
-											и фисташками</a></h2>
-									</div>
-								</li>
-								<li class="recipesList__item">
-									<div class="dishBox">
-										<div class="dishBox__body">
-											<figure>
-												<a href="#" title="">
-													<img src="img/013.jpg" alt="" title="">
-												</a>
-											</figure>
-											<ul class="dishBox__list">
-												<li>
-													<i class="icon icon-icon-1-clock"></i>
-													<span><b>Готовить</b> 35 минут</span>
-												</li>
-												<li>
-													<i class="icon icon-icon-2-speed"></i>
-													<span><b>Каллорийность</b> 240ккал/100г</span>
-												</li>
-												<li>
-													<i class="icon icon-comment"></i>
-													<span>128<b>комментрариев</b></span>
-												</li>
-											</ul>
-										</div>
-										<h2 class="dishBox__title"><a href="#" title="">Запеченное мясо с помидорами и сыром</a></h2>
-									</div>
-								</li>
-								<li class="recipesList__item">
-									<div class="dishBox">
-										<div class="dishBox__body">
-											<figure>
-												<a href="#" title="">
-													<img src="img/014.jpg" alt="" title="">
-												</a>
-											</figure>
-											<ul class="dishBox__list">
-												<li>
-													<i class="icon icon-icon-1-clock"></i>
-													<span><b>Готовить</b> 35 минут</span>
-												</li>
-												<li>
-													<i class="icon icon-icon-2-speed"></i>
-													<span><b>Каллорийность</b> 240ккал/100г</span>
-												</li>
-												<li>
-													<i class="icon icon-comment"></i>
-													<span>128<b>комментрариев</b></span>
-												</li>
-											</ul>
-										</div>
-										<h2 class="dishBox__title"><a href="#" title="">Тосты с гуакамоле и белой фасолью</a></h2>
-									</div>
-								</li>
-								<li class="recipesList__item">
-									<div class="dishBox">
-										<div class="dishBox__body">
-											<figure>
-												<a href="#" title="">
-													<img src="img/013.jpg" alt="" title="">
-												</a>
-											</figure>
-											<ul class="dishBox__list">
-												<li>
-													<i class="icon icon-icon-1-clock"></i>
-													<span><b>Готовить</b> 35 минут</span>
-												</li>
-												<li>
-													<i class="icon icon-icon-2-speed"></i>
-													<span><b>Каллорийность</b> 240ккал/100г</span>
-												</li>
-												<li>
-													<i class="icon icon-comment"></i>
-													<span>128<b>комментрариев</b></span>
-												</li>
-											</ul>
-										</div>
-										<h2 class="dishBox__title"><a href="#" title="">Фасоль зеленая с черри, чесноком
-											и фисташками</a></h2>
-									</div>
-								</li>
-								<li class="recipesList__item">
-									<div class="dishBox">
-										<div class="dishBox__body">
-											<figure>
-												<a href="#" title="">
-													<img src="img/013.jpg" alt="" title="">
-												</a>
-											</figure>
-											<ul class="dishBox__list">
-												<li>
-													<i class="icon icon-icon-1-clock"></i>
-													<span><b>Готовить</b> 35 минут</span>
-												</li>
-												<li>
-													<i class="icon icon-icon-2-speed"></i>
-													<span><b>Каллорийность</b> 240ккал/100г</span>
-												</li>
-												<li>
-													<i class="icon icon-comment"></i>
-													<span>128<b>комментрариев</b></span>
-												</li>
-											</ul>
-										</div>
-										<h2 class="dishBox__title"><a href="#" title="">Запеченное мясо с помидорами и сыром</a></h2>
-									</div>
-								</li>
-								<li class="recipesList__item">
-									<div class="dishBox">
-										<div class="dishBox__body">
-											<figure>
-												<a href="#" title="">
-													<img src="img/014.jpg" alt="" title="">
-												</a>
-											</figure>
-											<ul class="dishBox__list">
-												<li>
-													<i class="icon icon-icon-1-clock"></i>
-													<span><b>Готовить</b> 35 минут</span>
-												</li>
-												<li>
-													<i class="icon icon-icon-2-speed"></i>
-													<span><b>Каллорийность</b> 240ккал/100г</span>
-												</li>
-												<li>
-													<i class="icon icon-comment"></i>
-													<span>128<b>комментрариев</b></span>
-												</li>
-											</ul>
-										</div>
-										<h2 class="dishBox__title"><a href="#" title="">Тосты с гуакамоле и белой фасолью</a></h2>
-									</div>
-								</li>
-								<li class="recipesList__item">
-									<div class="dishBox">
-										<div class="dishBox__body">
-											<figure>
-												<a href="#" title="">
-													<img src="img/013.jpg" alt="" title="">
-												</a>
-											</figure>
-											<ul class="dishBox__list">
-												<li>
-													<i class="icon icon-icon-1-clock"></i>
-													<span><b>Готовить</b> 35 минут</span>
-												</li>
-												<li>
-													<i class="icon icon-icon-2-speed"></i>
-													<span><b>Каллорийность</b> 240ккал/100г</span>
-												</li>
-												<li>
-													<i class="icon icon-comment"></i>
-													<span>128<b>комментрариев</b></span>
-												</li>
-											</ul>
-										</div>
-										<h2 class="dishBox__title"><a href="#" title="">Фасоль зеленая с черри, чесноком
-											и фисташками</a></h2>
-									</div>
-								</li>
-							</ul>
-							<ul class="pageNavi">
-								<li class="pageNavi__prew">
-									<a href="#" title="">
-										<i></i>
-									</a>
-								</li>
-								<li class="activ"><a href="#" title="">1</a></li>
-								<li><a href="#" title="">2</a></li>
-								<li><a href="#" title="">3</a></li>
-								<li class="pageNavi__next">
-									<a href="#" title="">
-										<i></i>
-									</a>
-								</li>
-							</ul>
+									</section>
+								</form>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -407,6 +225,49 @@
 			</div>
 		</div>
 	</footer>
+	<div id="popapuploadPhotoWrap" class="popap">
+		<div class="popap__inner popap__inner--uploadPhoto">
+			<a class="popap__cloze" href="#" title=""><i class="fa fa-times" aria-hidden="true"></i></a>
+			<h2 class="popap__title">Фотография профайла</h2>
+			<form class="uploadPhotoForm" method="post" action="#">
+				<div class="uploadPhotoForm__fileField">
+					<input type="file" name="f">
+					<span>Формат файла JPG, PNG. Размер файла не более 5 Мбайт.</span>
+				</div>
+				<figure class="uploadPhotoForm__pic">
+					<img src="img/017.jpg" alt="" title="">
+				</figure>
+				<div class="uploadPhotoForm__buttons">
+					<button class="btn btn--cancel">отмена</button>
+					<button class="btn">сохранить</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="panel">
+		<div class="panel__top">
+			<div class="userAvatar">
+				<figure class="userAvatar__pic">
+					<img src="img/018.jpg" alt="" title="">
+				</figure>
+				<p class="userAvatar__name"><span>Киррил Петрович</span></p>
+			</div>
+			<ul class="panelList">
+				<li class="panelList__item panelList__item--active">
+					<a href="#" title="">
+						<i class="icon icon-settings"></i>
+						<span>Настройки<br>профиля</span>
+					</a>
+				</li>
+				<li class="panelList__item">
+					<a class="out" href="#" title="">
+						<i class="icon icon-out"></i>
+						<span>Выход</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="libs/jquery.min.js"><\/script>')</script>
     <script src="libs/owl.carousel.min.js"></script>

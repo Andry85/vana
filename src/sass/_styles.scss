@@ -102,6 +102,7 @@
 }
 .lang {
   display: inline-block;
+  vertical-align: middle;
   @include breakpoint(sm-down) {
     display: block;
     margin: 10px 0;
@@ -139,6 +140,7 @@
 .settings {
   margin: 0 0 0 39px;
   display: inline-block;
+  vertical-align: middle;
   border-bottom: 1px dashed #666;
   @include breakpoint(sm-down) {
     margin-left: 18px;
@@ -1581,7 +1583,7 @@ a.subscription {
   }
 }
 
-.advertisingPopap {
+.popap {
   background: hsla(0, 100%, 0%,0.5);
   position: fixed;
   left: 0;
@@ -1600,6 +1602,10 @@ a.subscription {
     background: #fff;
     border-radius: 3px;
     padding: 58px 65px 63px 65px;
+    &--uploadPhoto {
+      width: 575px;
+      padding: 42px 77px 41px 77px;
+    }
     @include breakpoint(md-down) {
       width: 90%;
     }
@@ -1624,7 +1630,7 @@ a.subscription {
 
   }
 }
-.advertisingPopapList {
+.popapList {
   padding: 62px 0 0 0;
   display: flex;
   flex-wrap: wrap;
@@ -1657,4 +1663,204 @@ a.subscription {
       }
     }
   }
+}
+
+.profilePage {
+  max-width: 795px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 0 83px 0;
+  @include breakpoint(md-down) {
+    max-width: 100%;
+  }
+  @include breakpoint(sm-down) {
+    padding-bottom: 25px;
+  }
+  &__sidebar {
+    flex-basis: 180px;
+    @include breakpoint(sm-down) {
+      flex-basis: 100%;
+      padding-bottom: 25px;
+    }
+
+  }
+  &__content {
+    flex-basis: 556px;
+    @include breakpoint(sm-down) {
+      flex-basis: 100%;
+    }
+  }
+  &__box {
+    h2 {
+      margin: 0 0 32px 0;
+    }
+  }
+  &__fields {
+    margin: 0 0 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .formGroup {
+      flex-basis: 264px;
+      @include breakpoint(sm-down) {
+        flex-basis: 100%;
+      }
+      .btn {
+        min-width: 100%;
+        &--cancel {
+          min-width: 164px;
+        }
+      }
+    }
+  }
+}
+.avatar {
+  margin-bottom: 13px;
+  img {
+    border-radius: 50%;
+  }
+}
+.changePhoto {
+  font-weight: 300;
+  text-decoration: none;
+  color: #737373;
+  &:hover,&:active {
+    text-decoration: none;
+  }
+  i {
+    position: relative;
+    top: 5px;
+    margin: 0 7px 0 0;
+  }
+  span {
+    border-bottom: 1px dashed #737373;
+  }
+}
+
+.uploadPhotoForm {
+  &__fileField {
+    padding: 42px 0 0 0;
+    @include breakpoint(sm-down) {
+      padding-top: 15px;
+    }
+    span {
+      display: block;
+      font-size: 15px;
+      padding: 9px 0 30px 0;
+    }
+  }
+  &__pic {
+    img {
+      width: 100%;
+      max-height: 353px;
+    }
+  }
+  &__buttons {
+    padding: 22px 0 0 0;
+    text-align: center;
+    .btn {
+      margin: 0 3px 10px 4px;
+      min-width: 173px;
+      @include breakpoint(sm-down) {
+        min-width: 45%;
+      }
+      &--cancel {
+        min-width: 163px;
+        @include breakpoint(sm-down) {
+          min-width: 45%;
+        }
+      }
+    }
+  }
+}
+
+#popapuploadPhotoWrap {
+  display: none;
+}
+
+.userAvatar {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 0 45px;
+  position: relative;
+  &__pic {
+    position: absolute;
+    left: 0;
+    top: 0;
+    img {
+      border-radius: 50%;
+    }
+  }
+  &__name {
+    margin: 0;
+    color: #000;
+    padding: 0 0 0 63px;
+    min-height: 53px;
+    max-width: 192px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    &:before {
+      content: "";
+      display: inline-block;
+      min-height: inherit;
+      height: 100%;
+      vertical-align: middle;
+    }
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+.panel {
+  border-left: 1px solid #d1d1d0;
+  position: fixed;
+  z-index: 99;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  background: #d1d1d0;
+  display: none;
+  @include breakpoint(sm-down) {
+    display: none;
+  }
+  &__top {
+    background: #fff;
+    padding: 59px 0 0 0;
+  }
+  .userAvatar {
+    margin-left: 12px;
+    &__name {
+      max-width: inherit;
+      white-space: normal;
+    }
+  }
+}
+.panelList {
+  &__item {
+    padding: 23px 11px 21px 49px;
+    border-bottom: 1px solid #d1d1d0;
+    a {
+      color: #666;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      span {
+        font-size: 14px;
+        padding: 0 0 0 12px;
+      }
+    }
+  }
+  &__item--active {
+    a {
+      color: #00ad4e;
+    }
+  }
+}
+#avatar {
+  cursor: pointer;
 }

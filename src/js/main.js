@@ -187,11 +187,51 @@
     /********************************************************/
 
 
-    $('.advertisingPopap__cloze').on('click', function(e){
+    /*********************************************************/
+    /* start popap   */
+    /********************************************************/
+    $('.popap__cloze').on('click', function(e){
         event.preventDefault();
-        $(this).parents('.advertisingPopap').fadeOut();
+        $(this).parents('.popap').fadeOut();
 
     });
+
+    $('.changePhoto').on('click', function(e){
+        e.preventDefault();
+        $(this).parents('body').find('#popapuploadPhotoWrap').show();
+
+    });
+    /*********************************************************/
+    /* start popap   */
+    /********************************************************/
+
+
+    /*********************************************************/
+    /* start user cabinet  */
+    /********************************************************/
+        changePanelWidth();
+        $(window).resize(changePanelWidth);
+        function changePanelWidth() {
+            var avatar = $("#avatar");
+            var offset = avatar.offset();
+            var wit = $(window).width();
+            var panelWidth = wit - offset.left;
+            $('.panel').width(panelWidth+12);
+        };
+        $('.out').on('click', function(e){
+            e.preventDefault();
+            $(this).parents('.panel').fadeOut('slow');
+        });
+        $('#avatar').on('click', function(e){
+            $(this).parents('body').find('.panel').show();
+        });
+    /*********************************************************/
+    /* start user cabinet   */
+    /********************************************************/
+
+
+
+
 
 
 
