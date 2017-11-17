@@ -7,12 +7,13 @@
 }
 .header {
   background: #fff;
+  position: relative;
+  z-index: 99998;
   @include breakpoint(sm-down) {
    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
-    z-index: 99998;
   }
   &__top {
     display: flex;
@@ -75,6 +76,11 @@
   }
   &__bottom {
     border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    background: #fff;
+    @include breakpoint(sm-down) {
+      border-bottom: 0;
+    }
   }
 }
 .container {

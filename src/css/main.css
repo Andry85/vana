@@ -487,14 +487,15 @@ body {
   display: inline-block; }
 
 .header {
-  background: #fff; }
+  background: #fff;
+  position: relative;
+  z-index: 99998; }
   @media (max-width: 767px) {
     .header {
       position: fixed;
       left: 0;
       top: 0;
-      width: 100%;
-      z-index: 99998; } }
+      width: 100%; } }
   .header__top {
     display: -webkit-box;
     display: -webkit-flex;
@@ -572,7 +573,12 @@ body {
       .header__col-3 {
         display: none; } }
   .header__bottom {
-    border-top: 1px solid #e1e1e1; }
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    background: #fff; }
+    @media (max-width: 767px) {
+      .header__bottom {
+        border-bottom: 0; } }
 
 .container {
   max-width: 1190px;
