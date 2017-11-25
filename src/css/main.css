@@ -2805,3 +2805,24 @@ a.subscription {
   padding: 6px 0 0 0; }
   .ratingList__item {
     display: inline-block; }
+
+.userCountWrap {
+  position: relative;
+  z-index: 100; }
+  .userCountWrap__inner {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 103px;
+    background: url("../img/userCountWrap__inner-bg.png") center bottom no-repeat;
+    padding: 0 0 8px 0; }
+  .userCountWrap__inside {
+    background: #00ad4e;
+    text-align: center;
+    padding: 10px 5px 26px 5px; }
+    .userCountWrap__inside figure img {
+      -webkit-border-radius: 50%;
+              border-radius: 50%; }
+    .userCountWrap__inside figure figcaption {
+      padding: 7px 0 0 0;
+      color: #fff; }
